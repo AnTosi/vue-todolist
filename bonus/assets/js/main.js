@@ -30,11 +30,11 @@ const app = new Vue ({
 
     methods: {
         removeTask(i){
-            console.log("cliccato su delete, i");
+            // console.log("cliccato su delete, i");
             let removed = this.tasks[i];
             this.tasks.splice(i,1);
             this.trashedTasks.push(removed)
-            console.log(trashedTasks);
+            // console.log(trashedTasks);
         },
 
         addTask(){
@@ -72,7 +72,7 @@ const app = new Vue ({
             } else {
                 this.discarica =false
             }
-            console.log(this.discarica);
+            // console.log(this.discarica);
         },
 
         recycle(i){
@@ -83,11 +83,17 @@ const app = new Vue ({
 
         clearBin(){
             let bigRedButton = prompt(`This wil delete all tasks forever (not really, cause I initially misinterpreted the task and created a dump, but let's pretend it does)! Confirm [Y/N]`);
-            if (bigRedButton.toLowerCase = "y") {
+            // console.log(bigRedButton);
+            if (bigRedButton.toLowerCase() == "y") {
                 this.dump.push(...this.trashedTasks);
-                this.trashedTasks = "";
-                
+                this.trashedTasks = [];             
             }
+        },
+
+        timeRegression(i){
+            let timeWarp = this.dump[i];
+            this.dump.splice(i,1);
+            this.trashedTasks.push(timeWarp);
         }
     }
 })
