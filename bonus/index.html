@@ -27,12 +27,13 @@
                 <div class="todo task_box" v-if="tasks.length > 0">
                     <h3>Todo List</h3>
                     <div class="item" v-for="(task, index) in tasks">
-                        <p>
+                        <p contenteditable>
                             {{task}}
                         </p>
-        
+                        <!-- <input type="text" v-model="editedTask[index]" v-show="editing" @keyup.enter="editThis(editedTask, index)"> -->
                         <div class="task_action">
                             <i class="fas fa-check-circle" @click = "completeTask(index)"></i>
+                            <!-- <i class="fas fa-edit" @click = "edit(index)"></i> -->
                             <i class="fas fa-trash" @click = "removeTask(index)"></i>
                         </div>
                     </div>

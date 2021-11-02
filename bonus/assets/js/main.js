@@ -1,6 +1,8 @@
 //questo è uno sgamotto che mi serve per far funzionare il vueJS component dell'inspector su firefox
 Vue.config.devtools = true;
 
+var edited = "";
+
 const app = new Vue ({
     el: "#app",
     data: {
@@ -26,6 +28,11 @@ const app = new Vue ({
         discarica: false,
 
         error: false,
+
+        // editing: false,
+
+        // editedTask: [],
+
     },
 
     methods: {
@@ -94,9 +101,28 @@ const app = new Vue ({
             let timeWarp = this.dump[i];
             this.dump.splice(i,1);
             this.trashedTasks.push(timeWarp);
+        },
+
+
+
+        // ho cercato di collegare l'edit con l'array, ma senza input e v-model non sono riuscito.
+        // ho provato a mettere v-show su degli input con variabile booleana ma mi mostra tutti gli input.
+
+        //niente, non riesco a farlo funzionare per bene, mi sto avvicinando ma è ancora tutto troppo orrendo e sono le 19.
+        //mi sono accorto troppo taqrdi di aver frainteso il primo punto eora c'è la masterclass (che avevo dimenticato)
+
+
+        // edit(i){
+        //     this.editing = true;
+        // },
+
+        // editThis(editedTask, i){
+        //     console.log(editedTask + i);
+            // this.tasks[i].splice(i, 1);
+            // this.tasks.splice(i, 0, editedTask)
         }
     }
-})
+)
 
 // creare to do list con vueJS
 
@@ -129,3 +155,5 @@ const app = new Vue ({
 //stessa cosa, creo funzione clearTask per rimuovere il task dal cestino e aggiungerlo in un ulteriore array per ultimo punto bonus (Il nostro utente per ora sembra non avere altre richieste ... ma chissá se dopo gli viene in mente che vuole anche poter rimettere una task cancellata nella lista di tasks da fare, magari l'ha cancellata per sbaglio?)
 
 //avevo male interpretato l'ultimo punto, ma oramai l'ho fatto in quel modo e lo lascio così. Aggiungo alert e prompt come da foto.
+
+// AAAAAAH MI SONO ACCORTO ORA CHE NON AVEVO CAPITO IL PRIMO PUNTO DEL BONUS, ora lo faccio
