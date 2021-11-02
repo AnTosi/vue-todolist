@@ -79,6 +79,11 @@ const app = new Vue ({
             let recycling = this.trashedTasks[i];
             this.trashedTasks.splice(i,1);
             this.tasks.push(recycling);
+        },
+
+        clearBin(){
+            this.dump.push(...this.trashedTasks);
+            this.trashedTasks = "";
         }
     }
 })

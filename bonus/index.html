@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div v-if="trashedTasks.length > 0" class="trashed task_box">
-                    <h3>Trashed</h3>
+                    <h3>Trashed <span @click="clearBin" class="armageddon">(Clear bin)</span></h3>
                     <div class="item" v-for="(trashedTask, index) in trashedTasks">
                         <p>
                             {{trashedTask}}
