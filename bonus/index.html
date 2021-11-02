@@ -37,18 +37,37 @@
                     </div>
                 </div>
 
+                <div v-else class="todo task_box">
+                    <h4>Nothing left to do!</h4>
+                </div>
+
                 <div class="completed task_box">
                     <h3>Completed</h3>
+                    <div class="item" v-for="(completedTask, index) in completedTasks">
+                        <p>
+                            {{completedTask}}
+                        </p>
+        
+                        <div class="delete-task">
+                            <i class="fas fa-times" aria-hidden="true" @click = "completeTask(index)"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="trashed task_box">
                     <h3>Trashed</h3>
+                    <div class="item" v-for="(trashedTask, index) in trashedTasks">
+                        <p>
+                            {{trashedTask}}
+                        </p>
+        
+                        <div class="delete-task">
+                            <i class="fas fa-times" aria-hidden="true" @click = "removeTask(index)"></i>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-    
-            <div v-else>
-                <p>Nothing left to do!</p>
-            </div>
+
 
         </div>
     </div>
