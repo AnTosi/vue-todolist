@@ -4,9 +4,9 @@ const app = new Vue ({
     el: "#app",
     data: {
         tasks: [
+            "Fare i compiti",
             "Fare la spesa",
-            "Andare in palestra",
-            "imparare VueJS"
+            "Fare il bucato"
         ],
 
         newTask:"",
