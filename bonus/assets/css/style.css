@@ -7,6 +7,7 @@
 
 body {
     background-color: #B0C4DE;
+    padding-bottom: 3rem;
 }
 
 .logo img {
@@ -52,7 +53,6 @@ body {
 }
 
 .todo {
-    
     width: 48%;
 }
 
@@ -64,15 +64,17 @@ body {
     display: flex;
     padding: 0.5rem 0 0.5rem 0;
     border-bottom: 1px solid #DADEE1;
+    justify-content: space-between;
 }
 
-.item p {
-    width: 70%;
-}
-
-.item .delete-task {
+.item .task_action {
     text-align: right;
-    width: 30%;
+    /* width: 30%; */
+}
+
+.item .task_action i {
+    margin-left: 1rem;
+    cursor: pointer;
 }
 
 .tasks {
@@ -85,14 +87,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #F5F7F7;
-    padding: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 0.6rem;
-}
-
-.completed {
-    width: 24%;
-}
-
-.trashed {
-    width: 24%;
 }

@@ -31,7 +31,8 @@
                             {{task}}
                         </p>
         
-                        <div class="delete-task">
+                        <div class="task_action">
+                            <i class="fas fa-check-circle" @click = "completeTask(index)"></i>
                             <i class="fas fa-times" aria-hidden="true" @click = "removeTask(index)"></i>
                         </div>
                     </div>
@@ -41,33 +42,47 @@
                     <h4>Nothing left to do!</h4>
                 </div>
 
-                <div class="completed task_box">
+                <div v-if="completedTasks.length > 0" class="completed task_box">
                     <h3>Completed</h3>
                     <div class="item" v-for="(completedTask, index) in completedTasks">
                         <p>
                             {{completedTask}}
                         </p>
         
-                        <div class="delete-task">
-                            <i class="fas fa-times" aria-hidden="true" @click = "completeTask(index)"></i>
+                        <div class="task_action">
+                            <i class="fas fa-undo-alt" aria-hidden="true" @click ="redoTask(index)"></i>
                         </div>
                     </div>
                 </div>
-                <div class="trashed task_box">
+                <div v-if="trashedTasks.length > 0" class="trashed task_box">
                     <h3>Trashed</h3>
                     <div class="item" v-for="(trashedTask, index) in trashedTasks">
                         <p>
                             {{trashedTask}}
                         </p>
         
-                        <div class="delete-task">
-                            <i class="fas fa-times" aria-hidden="true" @click = "removeTask(index)"></i>
+                        <div class="task_action">
+                            <i class="fas fa-times" aria-hidden="true" @click = "clearTask(index)"></i>
                         </div>
                     </div>
                 </div>
 
             </div>
-
+            <div class="dumpster">
+                <button @click="showDumpster">Guarda tutti i task cestinati</button>
+                <div v-show="discarica" class="task_box">
+                    <h3>Questi sono i task che hai rimosso:</h3>
+                    <div class="item" v-for="(dumped, index) in dump">
+                        <p>
+                            {{dumped}}
+                        </p>
+        
+                        <div class="task_action">
+                            <i class="fas fa-times" aria-hidden="true" @click = "clearTask(index)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
