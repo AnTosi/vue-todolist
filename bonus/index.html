@@ -33,7 +33,7 @@
         
                         <div class="task_action">
                             <i class="fas fa-check-circle" @click = "completeTask(index)"></i>
-                            <i class="fas fa-times" aria-hidden="true" @click = "removeTask(index)"></i>
+                            <i class="fas fa-trash" @click = "removeTask(index)"></i>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
         
                         <div class="task_action">
                             <i class="fas fa-recycle" @click="recycle(index)"></i>
-                            <i class="fas fa-times" aria-hidden="true" @click = "clearTask(index)"></i>
+                            <i class="fas fa-dumpster" @click = "clearTask(index)"></i>
                         </div>
                     </div>
                 </div>
