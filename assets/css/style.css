@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .logo img {
@@ -18,14 +17,19 @@
 .logo {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-align: center;
+}
+
+.addTask {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .addTask input {
     width: 300px;
     border-radius: 0.6rem;
-    border: 1px solid grey;
+    border: 1px solid black;
     padding: 0.5rem 1rem;
-    margin-right: 0.75rem;
 }
 
 .addTask button {
@@ -44,18 +48,13 @@
     border-radius: 0.6rem;
 }
 
-.addTask input::placeholder {
-    color: grey;
-  }
-  
-
 .error {
     color: red;
 }
 
 .item {
     display: flex;
-    padding: 0.3rem 0 0.3rem 0;
+    padding: 0.5rem 0 0.5rem 0;
     border-bottom: 1px solid #DADEE1;
 }
 
