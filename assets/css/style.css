@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.container {
+    width: 200px;
+    margin: auto;
+}
+
+.error {
+    color: red;
+}
+
+.item {
+    display: flex;
+}
+
+.item p {
+    width: 70%;
+}
+
+.item .delete-task {
+    text-align: right;
+    width: 30%;
+}
