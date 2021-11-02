@@ -82,8 +82,12 @@ const app = new Vue ({
         },
 
         clearBin(){
-            this.dump.push(...this.trashedTasks);
-            this.trashedTasks = "";
+            let bigRedButton = prompt(`This wil delete all tasks forever (not really, cause I initially misinterpreted the task and created a dump, but let's pretend it does)! Confirm [Y/N]`);
+            if (bigRedButton.toLowerCase = "y") {
+                this.dump.push(...this.trashedTasks);
+                this.trashedTasks = "";
+                
+            }
         }
     }
 })
