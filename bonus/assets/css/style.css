@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    margin-top: 30vh;
+    margin-top: 20vh;
     width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -31,6 +31,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .helper {
@@ -50,6 +51,7 @@ body {
     border-radius: 0.6rem;
     border: 1px solid black;
     background-color: #EFEFEF;
+    cursor: pointer;
 }
 
 .todo {
@@ -89,4 +91,19 @@ body {
     background-color: #F5F7F7;
     padding: 1rem 2rem 1rem 2rem;
     border-radius: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.dumpster {
+    text-align: center;
+    width: 432px;
+    margin: auto;
+}
+
+.dumpster button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+    border: 1px solid black;
+    background-color: #EFEFEF;
+    cursor: pointer;
 }

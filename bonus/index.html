@@ -62,6 +62,7 @@
                         </p>
         
                         <div class="task_action">
+                            <i class="fas fa-recycle" @click="recycle(index)"></i>
                             <i class="fas fa-times" aria-hidden="true" @click = "clearTask(index)"></i>
                         </div>
                     </div>
@@ -69,7 +70,7 @@
 
             </div>
             <div class="dumpster">
-                <button @click="showDumpster">Guarda tutti i task cestinati</button>
+                <button @click="showDumpster">Guarda tutti i task rimossi dal cestino</button>
                 <div v-show="discarica" class="task_box">
                     <h3>Questi sono i task che hai rimosso:</h3>
                     <div class="item" v-for="(dumped, index) in dump">
