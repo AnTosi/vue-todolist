@@ -24,7 +24,8 @@
                 <div class="error" v-show="error">Devi inserire un task valido</div>
             </div>
             <div class="tasks">
-                <div class="currentTasks" v-if="tasks.length > 0">
+                <div class="todo task_box" v-if="tasks.length > 0">
+                    <h3>Todo List</h3>
                     <div class="item" v-for="(task, index) in tasks">
                         <p>
                             {{task}}
@@ -34,6 +35,13 @@
                             <i class="fas fa-times" aria-hidden="true" @click = "removeTask(index)"></i>
                         </div>
                     </div>
+                </div>
+
+                <div class="completed task_box">
+                    <h3>Completed</h3>
+                </div>
+                <div class="trashed task_box">
+                    <h3>Trashed</h3>
                 </div>
 
             </div>
