@@ -2,16 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .logo img {
-    height: 40px;
+    height: 70px;
 }
 
 .container {
-    width: 200px;
+    width: 450px;
     margin: auto;
 }
+
+.logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.addTask input {
+    width: 300px;
+    border-radius: 0.6rem;
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+    margin-right: 0.75rem;
+}
+
+.addTask button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+    border: 1px solid black;
+    background-color: #EFEFEF;
+}
+
+.tasks {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F7F7;
+    padding: 2rem;
+    border-radius: 0.6rem;
+}
+
+.addTask input::placeholder {
+    color: grey;
+  }
+  
 
 .error {
     color: red;
@@ -19,6 +55,8 @@
 
 .item {
     display: flex;
+    padding: 0.3rem 0 0.3rem 0;
+    border-bottom: 1px solid #DADEE1;
 }
 
 .item p {
