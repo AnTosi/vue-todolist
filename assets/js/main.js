@@ -1,3 +1,4 @@
+//questo è uno sgamotto che mi serve per far funzionare il vueJS component dell'inspector su firefox
 Vue.config.devtools = true;
 
 const app = new Vue ({
