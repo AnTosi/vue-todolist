@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #B0C4DE;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.container {
+    margin-top: 30vh;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.addTask {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.helper {
+    width: 100%;
+    text-align: center;
+}
+
+.addTask input {
+    width: 300px;
+    border-radius: 0.6rem;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
+.addTask button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+    border: 1px solid black;
+    background-color: #EFEFEF;
+}
+
+.currentTasks {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F7F7;
+    padding: 2rem;
+    border-radius: 0.6rem;
+}
+
+.error {
+    color: red;
+}
+
+.item {
+    display: flex;
+    padding: 0.5rem 0 0.5rem 0;
+    border-bottom: 1px solid #DADEE1;
+}
+
+.item p {
+    width: 70%;
+}
+
+.item .delete-task {
+    text-align: right;
+    width: 30%;
+}
